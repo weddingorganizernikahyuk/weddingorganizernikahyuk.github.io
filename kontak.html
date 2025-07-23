@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Nikah Yuk!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tampilan.css">
+    
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header dan Navigasi (Konsisten dengan halaman lain) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Navigasi Desktop Kiri -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="beranda.html" class="hover:text-gray-300 transition-colors duration-300">BERANDA</a>
+                    <a href="tentangkami.html" class="hover:text-gray-300 transition-colors duration-300">TENTANG KAMI</a>
+                    <div class="relative group">
+                        <a href="Untitled-4.html" class="hover:text-gray-300 transition-colors duration-300">LAYANAN</a>
+                        <div class="dropdown-content absolute left-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg py-1 hidden group-hover:block">
+                            <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                            <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                            <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Pusat -->
+                <div class="text-center text-white">
+                    <a href="beranda.html" class="text-2xl lg:text-3xl font-bold tracking-widest font-elegant">Nikah Yuk!</a>
+                    <p class="text-xs text-gray-400 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                </div>
+                <!-- Navigasi Desktop Kanan -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+                    <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+                    <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="beranda.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">BERANDA</a>
+            <a href="tentangkami.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">TENTANG KAMI</a>
+            <div class="relative w-full">
+                <a href="Untitled-4.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">LAYANAN</a>
+                <div class="space-y-1 text-sm">
+                    <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                    <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                    <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+            <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+            <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section untuk Halaman Kontak -->
+        <section class="hero-contact-section relative h-[60vh] min-h-[400px] flex items-center justify-center px-6">
+            <!-- Gambar latar belakang yang bisa diubah -->
+            <img src="https://i.pinimg.com/1200x/78/e2/95/78e2957bc5b4b065f4e547258989a4b4.jpg" 
+                 alt="Background Kontak" 
+                 class="absolute inset-0 w-full h-full object-cover brightness-75"
+                 onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/333/FFF?text=Gambar+Latar+Belakang+Kontak';">
+            <h1 class="relative z-10 font-elegant text-6xl md:text-7xl lg:text-8xl text-white uppercase text-shadow-lg">HUBUNGI KAMI</h1>
+        </section>
+
+        <div class="container mx-auto px-6 py-12">
+            <!-- Bagian Utama Kontak: Peta dan Formulir -->
+            <section class="contact-main-content grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="map-container bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <h2 class="font-elegant text-4xl mb-6 text-center text-white">Temukan Kami</h2>
+                    <!-- Google Maps Iframe -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.077209353974!2d106.82030131476953!3d-6.208763995505771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f464d2b2708f%3A0x6d5e1e1e1e1e1e1e!2sTebet%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid" 
+                        title="Lokasi Kantor Nikah Yuk!"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-80 rounded-md border-0">
+                    </iframe>
+                </div>
+
+                <div class="consultation-form-container bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <h2 class="font-elegant text-4xl mb-4 text-center text-white">Konsultasikan Hari Spesialmu</h2>
+                    <p class="text-gray-300 mb-8 text-center">Gunakan form di bawah ini dan customer service kami akan segera membantumu.</p>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="form-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" id="fullName" name="fullName" placeholder="Nama Lengkap" required
+                                   class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-500">
+                            <input type="email" id="email" name="email" placeholder="Email" required
+                                   class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-500">
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="No. Handphone"
+                                   class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-500">
+                            <textarea id="message" name="message" placeholder="Pesan Anda" rows="5"
+                                      class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-500 md:col-span-2"></textarea>
+                        </div>
+                        <div class="form-button text-center">
+                            <button type="submit"
+                                    class="bg-gray-700 text-white py-3 px-8 rounded-full hover:bg-gray-600 transition-colors duration-300 shadow-md">
+                                Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Bagian Sosial Media / Hubungi Kami -->
+            <section class="social-contact-section bg-gray-900 p-8 rounded-lg shadow-lg text-center">
+                <h2 class="font-elegant text-4xl mb-8 text-white">Terhubung dengan Kami</h2>
+                <div class="social-links-grid flex flex-wrap justify-center gap-8">
+                    <a href="https://wa.me/6281234567890" target="_blank" class="social-link flex flex-col items-center text-white hover:text-gray-300 transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-5xl mb-2"></i>
+                        <span class="text-lg">WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/nikahyukofficial?igsh=MTY1ajZ5ZHpmZHpjeg==" target="_blank" class="social-link flex flex-col items-center text-white hover:text-gray-300 transition-colors duration-300">
+                        <i class="fab fa-instagram text-5xl mb-2"></i>
+                        <span class="text-lg">Instagram</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Sama dengan halaman beranda) -->
+    <footer class="bg-gray-200 text-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="border-t border-gray-400 mb-12"></div>
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
+                <div class="md:w-1/3 flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold tracking-widest">Nikah Yuk!</h3>
+                    <p class="text-xs text-gray-600 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                    <p class="text-xs text-gray-500 mt-auto pt-8">2025 Hak Cipta Terpelihara</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">KANTOR</h4>
+                    <p class="text-sm">Jl. Alam Sutera Raya No. 16A, <br> RT.4/RW.3, Kebon Jeruk, Tebet, <br> South Jakarta City, Jakarta 12830</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">HUBUNGI KAMI</h4>
+                    <p class="text-sm">+62 21 292008889</p>
+                    <p class="text-sm">cs@nikahyuk!.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Confirmation / Messages -->
+    <div id="custom-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl text-center max-w-sm mx-4">
+            <p class="text-gray-800 text-lg mb-6"></p> <!-- Pesan akan dimasukkan di sini oleh JS -->
+            <div class="flex justify-center space-x-4">
+                <button id="modal-confirm-btn" class="bg-gray-700 text-white py-2 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300">Oke</button>
+                <button id="modal-cancel-btn" class="bg-gray-300 text-gray-800 py-2 px-6 rounded-lg hover:bg-gray-400 transition-colors duration-300 hidden">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mengatur toggle untuk menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                if (mobileMenu) mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Mendapatkan elemen modal
+        const customModal = document.getElementById('custom-modal');
+        const modalMessageP = customModal ? customModal.querySelector('p') : null;
+        const modalConfirmBtn = document.getElementById('modal-confirm-btn');
+        const modalCancelBtn = document.getElementById('modal-cancel-btn');
+
+        // Fungsi untuk menampilkan modal dengan pesan dan konfigurasi tombol kustom
+        function showCustomModal(message, isConfirmation = false, confirmText = 'Oke', cancelText = 'Batal', confirmAction = null) {
+            if (!customModal || !modalMessageP || !modalConfirmBtn || !modalCancelBtn) {
+                console.error("Modal elements not found!");
+                return;
+            }
+
+            modalMessageP.textContent = message;
+            modalConfirmBtn.textContent = confirmText;
+
+            // Hapus semua event listener sebelumnya untuk menghindari duplikasi
+            modalConfirmBtn.onclick = null;
+            modalCancelBtn.onclick = null;
+
+            if (isConfirmation) {
+                modalCancelBtn.textContent = cancelText;
+                modalCancelBtn.classList.remove('hidden');
+                
+                modalConfirmBtn.onclick = () => {
+                    if (confirmAction) {
+                        confirmAction();
+                    }
+                    customModal.classList.add('hidden');
+                };
+                modalCancelBtn.onclick = () => {
+                    customModal.classList.add('hidden');
+                };
+            } else { // Pesan sederhana dengan tombol "Oke"
+                modalCancelBtn.classList.add('hidden');
+                modalConfirmBtn.onclick = () => {
+                    customModal.classList.add('hidden');
+                };
+            }
+            customModal.classList.remove('hidden');
+        }
+
+        // Penanganan pengiriman formulir kontak
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Mencegah pengiriman formulir default
+
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (fullName && email && message) {
+                    showCustomModal(`Terima kasih, ${fullName}! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.`, false, 'Oke');
+                    contactForm.reset(); // Mengatur ulang formulir
+                } else {
+                    showCustomModal('Mohon lengkapi semua bidang yang wajib diisi (Nama Lengkap, Email, Pesan).', false, 'Oke');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

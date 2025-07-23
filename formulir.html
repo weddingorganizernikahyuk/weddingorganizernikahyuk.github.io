@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Nikah Yuk!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tampilan.css">
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-black text-white font-inter">
+    <!-- Header dan Navigasi (Konsisten dengan halaman lain) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Navigasi Desktop Kiri -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="beranda.html" class="hover:text-gray-300 transition-colors duration-300">BERANDA</a>
+                    <a href="tentangkami.html" class="hover:text-gray-300 transition-colors duration-300">TENTANG KAMI</a>
+                    <div class="relative group">
+                        <a href="Untitled-4.html" class="hover:text-gray-300 transition-colors duration-300">LAYANAN</a>
+                        <div class="dropdown-content absolute left-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg py-1 hidden group-hover:block">
+                            <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                            <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                            <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Pusat -->
+                <div class="text-center text-white">
+                    <a href="beranda.html" class="text-2xl lg:text-3xl font-bold tracking-widest font-elegant">Nikah Yuk!</a>
+                    <p class="text-xs text-gray-400 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                </div>
+                <!-- Navigasi Desktop Kanan -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+                    <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+                    <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="beranda.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">BERANDA</a>
+            <a href="tentangkami.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">TENTANG KAMI</a>
+            <div class="relative w-full">
+                <a href="Untitled-4.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">LAYANAN</a>
+                <div class="space-y-1 text-sm">
+                    <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                    <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                    <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+            <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+            <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+        </div>
+    </header>
+    <!-- Formulir Pemesanan -->
+    <section class="order-form-page-container">
+        <h2>Formulir Pemesanan Paket Pernikahan</h2>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="package-select">Pilih Paket:</label>
+                <select id="package-select" name="package-select" required>
+                    <option value="">-- Pilih Paket --</option>
+                    <!-- Opsi akan diisi oleh JavaScript -->
+                </select>
+            </div>
+            
+            <div class="addons-section">
+                <h3>Layanan Tambahan (Add-ons)</h3>
+                <div class="addons-grid">
+                    <div class="addon-item">
+                        <input type="checkbox" id="addon-prewedding" name="addon-prewedding" data-price="5000000">
+                        <label for="addon-prewedding">Pre-Wedding Photo Shoot</label>
+                        <span class="addon-price">Rp 5.000.000</span>
+                    </div>
+                    <div class="addon-item">
+                        <input type="checkbox" id="addon-photobooth" name="addon-photobooth" data-price="3000000">
+                        <label for="addon-photobooth">Photo Booth</label>
+                        <span class="addon-price">Rp 3.000.000</span>
+                    </div>
+                    <div class="addon-item">
+                        <input type="checkbox" id="addon-drone" name="addon-drone" data-price="2500000">
+                        <label for="addon-drone">Dokumentasi Drone</label>
+                        <span class="addon-price">Rp 2.500.000</span>
+                    </div>
+                    <div class="addon-item">
+                        <input type="checkbox" id="addon-catering" name="addon-catering" data-price="10000000">
+                        <label for="addon-catering">Catering (untuk 100 pax)</label>
+                        <span class="addon-price">Rp 10.000.000</span>
+                    </div>
+                    <div class="addon-item">
+                        <input type="checkbox" id="addon-souvenir" name="addon-souvenir" data-price="2000000">
+                        <label for="addon-souvenir">Souvenir Pernikahan</label>
+                        <span class="addon-price">Rp 2.000.000</span>
+                    </div>
+                    <div class="addon-item">
+                        <input type="checkbox" id="addon-music" name="addon-music" data-price="4000000">
+                        <label for="addon-music">Live Music / Band</label>
+                        <span class="addon-price">Rp 4.000.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="customer-name-pria">Nama Lengkap Calon Pengantin (Pria):</label>
+                <input type="text" id="customer-name-pria" name="customer-name-pria" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-name-wanita">Nama Lengkap Calon Pengantin (Wanita):</label>
+                <input type="text" id="customer-name-wanita" name="customer-name-wanita" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-email">Email:</label>
+                <input type="email" id="customer-email" name="customer-email" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-phone">Nomor Telepon (WhatsApp):</label>
+                <input type="tel" id="customer-phone" name="customer-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="wedding-date">Tanggal Pernikahan:</label>
+                <input type="date" id="wedding-date" name="wedding-date" required>
+            </div>
+            <div class="form-group">
+                <label for="wedding-location">Lokasi Pernikahan:</label>
+                <textarea id="wedding-location" name="wedding-location" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="additional-notes">Catatan Tambahan (misal: preferensi warna, tema):</label>
+                <textarea id="additional-notes" name="additional-notes" rows="4"></textarea>
+            </div>
+
+            <div class="total-price-display">
+                Total Harga: <span id="display-total-price">Rp 0</span>
+            </div>
+
+            <div class="payment-info">
+                <h3>Tata Cara Pembayaran</h3>
+                <p>1. Lakukan pembayaran sejumlah <strong>Total Harga</strong> ke rekening di bawah ini.</p>
+                <p>2. Konfirmasi pembayaran Anda melalui email atau WhatsApp dengan melampirkan bukti transfer.</p>
+                <p>3. Pesanan Anda akan diproses setelah pembayaran terverifikasi dan tim kami akan segera menghubungi Anda untuk koordinasi lebih lanjut.</p>
+                <p><strong>Nomor Rekening:</strong> 123-456-7890 (Bank ABC)</p>
+                <p>Atas Nama: PT Nikah Yuk Sejahtera</p>
+            </div>
+
+            <button type="submit">Konfirmasi Pemesanan</button>
+        </form>
+    </section>
+
+    <!-- NEW: Success Message Modal -->
+    <div id="success-modal" class="success-modal-overlay">
+        <div class="success-modal-content">
+            <h2>Pemesanan Berhasil!</h2>
+            <p>Terima kasih atas pemesanan Anda. Tim kami akan segera memprosesnya dan menghubungi Anda untuk koordinasi lebih lanjut.</p>
+            <div class="success-actions">
+                <button id="view-invoice-btn">Lihat Struk</button>
+                <button id="close-success-modal-btn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Struk / Invoice -->
+    <div id="invoice-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button">&times;</button>
+            <h2>Struk Pemesanan Nikah Yuk!</h2>
+            <div id="invoice-content">
+                <!-- Konten struk akan diisi oleh JavaScript -->
+            </div>
+            <div class="invoice-actions">
+                <button id="print-invoice-btn">Cetak Struk</button>
+                <button id="save-invoice-btn">Simpan Struk</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer (Sama dengan halaman beranda) -->
+    <footer class="bg-gray-200 text-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="border-t border-gray-400 mb-12"></div>
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
+                <div class="md:w-1/3 flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold tracking-widest">Nikah Yuk!</h3>
+                    <p class="text-xs text-gray-600 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                    <p class="text-xs text-gray-500 mt-auto pt-8">2025 Hak Cipta Terpelihara</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">KANTOR</h4>
+                    <p class="text-sm">Jl. Alam Sutera Raya No. 16A, <br> RT.4/RW.3, Kebon Jeruk, Tebet, <br> South Jakarta City, Jakarta 12830</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">HUBUNGI KAMI</h4>
+                    <p class="text-sm">+62 21 292008889</p>
+                    <p class="text-sm">cs@nikahyuk!.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const successModal = document.getElementById('success-modal');
+            const invoiceModal = document.getElementById('invoice-modal');
+            const bookingForm = document.getElementById('booking-form');
+            const invoiceContent = document.getElementById('invoice-content');
+            const displayTotalPrice = document.getElementById('display-total-price');
+            const packageSelect = document.getElementById('package-select');
+            const addonCheckboxes = document.querySelectorAll('.addons-grid input[type="checkbox"]');
+            const viewInvoiceBtn = document.getElementById('view-invoice-btn');
+            const closeSuccessModalBtn = document.getElementById('close-success-modal-btn');
+
+            const packages = [
+                { id: 'paket-romantis', name: 'Paket Romantis', price: 15000000 },
+                { id: 'paket-bahagia', name: 'Paket Bahagia', price: 25000000 },
+                { id: 'paket-impian', name: 'Paket Impian', price: 40000000 },
+                { id: 'paket-adat-nusantara', name: 'Paket Adat Nusantara', price: 30000000 },
+                { id: 'paket-intimate-garden', name: 'Paket Intimate Garden', price: 20000000 },
+                { id: 'paket-mewah-eksklusif', name: 'Paket Mewah & Eksklusif', price: 75000000 }
+            ];
+
+            // Populate package select dropdown
+            packages.forEach(pkg => {
+                const option = document.createElement('option');
+                option.value = pkg.id;
+                option.textContent = pkg.name;
+                packageSelect.appendChild(option);
+            });
+
+            let currentTotalPrice = 0;
+
+            function calculateTotalPrice() {
+                let basePrice = 0;
+                const selectedPackageId = packageSelect.value;
+                const selectedPackage = packages.find(pkg => pkg.id === selectedPackageId);
+
+                if (selectedPackage) {
+                    basePrice = selectedPackage.price;
+                }
+
+                let addonsPrice = 0;
+                addonCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        addonsPrice += parseInt(checkbox.dataset.price);
+                    }
+                });
+
+                currentTotalPrice = basePrice + addonsPrice;
+                displayTotalPrice.textContent = `Rp ${currentTotalPrice.toLocaleString('id-ID')}`;
+            }
+
+            // Event listeners for price calculation
+            packageSelect.addEventListener('change', calculateTotalPrice);
+            addonCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', calculateTotalPrice);
+            });
+
+            // Fungsi untuk menutup modal (digunakan untuk invoice modal)
+            document.querySelectorAll('#invoice-modal .close-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    invoiceModal.classList.remove('active');
+                });
+            });
+
+            // Menutup modal saat mengklik di luar konten modal
+            invoiceModal.addEventListener('click', (event) => {
+                if (event.target === invoiceModal) {
+                    invoiceModal.classList.remove('active');
+                }
+            });
+
+            // Handle submit form pemesanan
+            bookingForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                // Dapatkan semua data formulir
+                const selectedPackageName = packageSelect.options[packageSelect.selectedIndex].textContent;
+                const customerNamePria = document.getElementById('customer-name-pria').value;
+                const customerNameWanita = document.getElementById('customer-name-wanita').value;
+                const customerEmail = document.getElementById('customer-email').value;
+                const customerPhone = document.getElementById('customer-phone').value;
+                const weddingDate = document.getElementById('wedding-date').value;
+                const weddingLocation = document.getElementById('wedding-location').value;
+                const additionalNotes = document.getElementById('additional-notes').value;
+
+                let selectedAddons = [];
+                addonCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        selectedAddons.push(checkbox.labels[0].textContent.trim()); // Get text from associated label
+                    }
+                });
+
+                // Buat konten struk
+                const invoiceDetails = `
+                    <p>Terima kasih atas pemesanan Anda, <strong>${customerNamePria} & ${customerNameWanita}</strong>!</p>
+                    <p>Berikut adalah detail pemesanan Anda:</p>
+                    <p><strong>Paket yang Dipilih:</strong> ${selectedPackageName}</p>
+                    ${selectedAddons.length > 0 ? `<p><strong>Layanan Tambahan:</strong> ${selectedAddons.join(', ')}</p>` : ''}
+                    <p><strong>Nama Calon Pengantin Pria:</strong> ${customerNamePria}</p>
+                    <p><strong>Nama Calon Pengantin Wanita:</strong> ${customerNameWanita}</p>
+                    <p><strong>Email:</strong> ${customerEmail}</p>
+                    <p><strong>No. Telepon:</strong> ${customerPhone}</p>
+                    <p><strong>Tanggal Pernikahan:</strong> ${weddingDate}</p>
+                    <p><strong>Lokasi Pernikahan:</strong> ${weddingLocation}</p>
+                    ${additionalNotes ? `<p><strong>Catatan Tambahan:</strong> ${additionalNotes}</p>` : ''}
+                    <p class="invoice-total">Total Pembayaran: Rp ${currentTotalPrice.toLocaleString('id-ID')}</p>
+                    <p>Mohon segera lakukan pembayaran ke rekening berikut:</p>
+                    <p><strong>Bank ABC:</strong> 123-456-7890 a.n. PT Nikah Yuk Sejahtera</p>
+                    <p>Setelah pembayaran, struk ini dapat dicetak atau disimpan sebagai bukti.</p>
+                    <p>Kami akan segera menghubungi Anda untuk langkah selanjutnya.</p>
+                `;
+
+                invoiceContent.innerHTML = invoiceDetails; // Isi konten struk
+
+                // Tampilkan modal sukses
+                successModal.classList.add('active');
+
+                // Reset form setelah submit
+                bookingForm.reset();
+                packageSelect.value = ""; // Reset dropdown
+                addonCheckboxes.forEach(checkbox => checkbox.checked = false); // Reset addons
+                calculateTotalPrice(); // Reset total price display
+            });
+
+            // Tombol "Lihat Struk" di modal sukses
+            viewInvoiceBtn.addEventListener('click', () => {
+                successModal.classList.remove('active'); // Tutup modal sukses
+                invoiceModal.classList.add('active'); // Tampilkan modal struk
+            });
+
+            // Tombol "Tutup" di modal sukses
+            closeSuccessModalBtn.addEventListener('click', () => {
+                successModal.classList.remove('active'); // Tutup modal sukses
+            });
+
+            // Fungsi untuk mencetak struk
+            document.getElementById('print-invoice-btn').addEventListener('click', () => {
+                window.print();
+            });
+
+            // Fungsi untuk menyimpan struk (sebagai file teks sederhana)
+            document.getElementById('save-invoice-btn').addEventListener('click', () => {
+                const invoiceText = invoiceContent.innerText;
+                const blob = new Blob([invoiceText], { type: 'text/plain;charset=utf-8' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `struk-pemesanan-nikah-yuk-${Date.now()}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            });
+
+            // Initial calculation
+            calculateTotalPrice();
+        });
+    </script>
+</body>
+</html>

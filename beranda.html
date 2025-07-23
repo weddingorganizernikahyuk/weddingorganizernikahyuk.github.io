@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikah Yuk! - Merayakan Cinta Tanpa Drama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan ke file CSS terpisah -->
+    <link rel="stylesheet" href="tampilan.css">
+</head>
+<body>
+
+    <!-- Kontrol Musik Latar -->
+    <audio id="background-music" loop>
+        <source src="C:\Users\HERLINDA\Downloads\wwd.mp3juice.blog - Anugerah Terindah - Andmesh (Saxophone Cover by Dori Wirawan) (320 KBps).mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <button id="audio-control-btn" class="hidden fixed bottom-5 right-5 z-50 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors duration-300">
+        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </button>
+
+
+    <!-- Header dan Navigasi (Sama dengan halaman beranda) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Navigasi Desktop Kiri -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="beranda.html" class="hover:text-gray-300 transition-colors duration-300">BERANDA</a>
+                    <a href="tentangkami.html" class="hover:text-gray-300 transition-colors duration-300">TENTANG KAMI</a>
+                    <div class="relative group">
+                        <a href="Untitled-4.html" class="hover:text-gray-300 transition-colors duration-300">LAYANAN</a>
+                        <div class="dropdown-content absolute left-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg py-1 hidden group-hover:block">
+                            <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                            <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                            <a href="untitled-4.html#fotografi" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Pusat -->
+                <div class="text-center text-white">
+                    <a href="beranda.html" class="text-2xl lg:text-3xl font-bold tracking-widest">Nikah Yuk!</a>
+                    <p class="text-xs text-gray-400 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                </div>
+                <!-- Navigasi Desktop Kanan -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+                    <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+                    <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="beranda.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">BERANDA</a>
+            <a href="tentangkami.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">TENTANG KAMI</a>
+            <div class="relative w-full">
+                <a href="Untitled-4.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">LAYANAN</a>
+                <div class="space-y-1 text-sm">
+                    <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                    <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                    <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+            <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+            <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian Hero Utama -->
+        <div class="relative h-[80vh] min-h-[500px] flex items-center">
+            <div class="absolute inset-0">
+                <img src="https://www.sunlife.co.id/content/dam/sunlife/regional/indonesia/images/Article%202.jpeg" alt="Pasangan pengantin bahagia" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/333/FFF?text=Gambar+Gagal+Dimuat';">
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="relative container mx-auto px-6 z-10">
+                <div class="max-w-2xl text-left">
+                    <h1 class="font-elegant text-6xl md:text-8xl leading-tight">“Sentuhan Profesional</h1>
+                    <h2 class="text-3xl md:text-4xl mt-2 mb-6">untuk Hari Bahagia Anda”</h2>
+                    <p class="text-base md:text-lg text-gray-300 mb-8">Jadikan hari bahagiamu bersama Nikah Yuk!.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#" class="bg-gray-200 text-gray-900 font-bold py-3 px-8 rounded-lg text-center hover:bg-white transition-colors duration-300">Konsultasi Gratis Sekarang</a>
+                        <a href="#" class="border-2 border-gray-400 text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-white hover:text-gray-900 transition-colors duration-300">Kunjungi Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Kenapa Memilih Nikah Yuk? -->
+        <section class="relative py-20 sm:py-28">
+            <div class="absolute inset-0">
+                <img src="https://jnewsonline.com/wp-content/uploads/2023/05/foto-pre-wedding.jpg" alt="Latar belakang tim pernikahan yang sedang bekerja" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/333/FFF?text=Gambar+Gagal+Dimuat';">
+                <div class="absolute inset-0 bg-black/75"></div>
+            </div>
+            <div class="relative z-10 container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+                    <div class="lg:w-1/3 text-center lg:text-left">
+                        <h2 class="font-elegant text-5xl md:text-6xl leading-tight text-white">Kenapa Memilih <br> Nikah Yuk?</h2>
+                    </div>
+                    <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-10">
+                        <!-- Fitur 1: Kerjasama Tim -->
+                        <div class="flex items-start space-x-4">
+                            <div><svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m-7.5-2.962a3.75 3.75 0 1 0-7.5 0 .75.75 0 0 1-1.5 0 5.25 5.25 0 1 1 10.5 0 .75.75 0 0 1-1.5 0Zm-3.75 1.962a3.75 3.75 0 1 0-7.5 0 .75.75 0 0 1-1.5 0 5.25 5.25 0 1 1 10.5 0 .75.75 0 0 1-1.5 0Z" /></svg></div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 text-white">KERJASAMA TIM</h3>
+                                <p class="text-gray-300 text-sm">Memastikan bahwa kebahagiaan dan kepuasan pelanggan adalah prioritas utama dalam setiap aspek pekerjaan.</p>
+                            </div>
+                        </div>
+                        <!-- Fitur 2: Kualitas -->
+                        <div class="flex items-start space-x-4">
+                            <div><svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" /></svg></div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 text-white">KUALITAS</h3>
+                                <p class="text-gray-300 text-sm">Menyediakan layanan yang tidak hanya memenuhi, tetapi juga melebihi harapan klien dalam hal kualitas dan kepuasan.</p>
+                            </div>
+                        </div>
+                        <!-- Fitur 3: Profesional -->
+                        <div class="flex items-start space-x-4">
+                            <div><svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.07a2.25 2.25 0 0 1-2.25 2.25H5.998a2.25 2.25 0 0 1-2.25-2.25v-4.07a2.25 2.25 0 0 1 .52-1.435l3.75-3.75a.75.75 0 0 1 1.06 0l3.75 3.75a2.25 2.25 0 0 1 .52 1.435Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 12 3m5.25 5.25.008.007-.008-.007Z" /></svg></div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 text-white">PROFESIONAL</h3>
+                                <p class="text-gray-300 text-sm">Menyediakan layanan yang profesional, bertindak dengan jujur, transparan, dan etis dalam semua interaksi bisnis.</p>
+                            </div>
+                        </div>
+                        <!-- Fitur 4: Kepuasan Pelanggan -->
+                        <div class="flex items-start space-x-4">
+                            <div><svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" /></svg></div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 text-white">KEPUASAN PELANGGAN</h3>
+                                <p class="text-gray-300 text-sm">Memastikan bahwa kebahagiaan dan kepuasan pelanggan adalah prioritas utama dalam setiap aspek pernikahan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Elegancy Never Fade -->
+        <section class="relative py-20 sm:py-28">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1541700513212-79f419c0221d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMGluZG9uZXNpYXxlbnwwfHwwfHx8MA%3D%3D" alt="Latar belakang tekstur kain elegan" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/333/FFF?text=Gambar+Gagal+Dimuat';">
+                <div class="absolute inset-0 bg-black/80"></div>
+            </div>
+            <div class="relative z-10 container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+                    <div class="md:w-1/3">
+                        <h2 class="font-elegant text-5xl md:text-6xl leading-none">ELEGANCY</h2>
+                        <p class="text-2xl text-gray-300">NEVER FADE</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-300">Kami memegang teguh tradisi dengan tetap memperhatikan elegansi dan kemewahan di setiap karya kami. Setiap karya kami mencerminkan keindahan tradisi yang kaya namun tetap relevan dengan sentuhan modern.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <img src="https://weddingmarket.com/storage/images/artikelidea/ebb7774f58e631808e00da161212acaa63139bf0.webp" alt="Foto pengantin wanita dengan gaun tradisional" class="w-full h-full object-cover rounded-lg aspect-[2/3] border-2 border-white/20 hover:border-white/50 transition" onerror="this.onerror=null;this.src='https://placehold.co/400x600/333/FFF?text=Gambar+Gagal+Dimuat';">
+                    <img src="https://i.pinimg.com/736x/4a/f5/30/4af5301740eb1f61df1208e4b8dc5707.jpg" alt="Foto pengantin wanita di taman" class="w-full h-full object-cover rounded-lg aspect-[2/3] border-2 border-white/20 hover:border-white/50 transition" onerror="this.onerror=null;this.src='https://placehold.co/400x600/333/FFF?text=Gambar+Gagal+Dimuat';">
+                    <img src="https://i.pinimg.com/736x/3d/00/c2/3d00c2422a26478980971b245562465a.jpg" alt="Close up riasan pengantin wanita" class="w-full h-full object-cover rounded-lg aspect-[2/3] border-2 border-white/20 hover:border-white/50 transition" onerror="this.onerror=null;this.src='https://placehold.co/400x600/333/FFF?text=Gambar+Gagal+Dimuat';">
+                    <img src="https://i.pinimg.com/736x/c2/2f/28/c22f2859e720eb1c5200dc1ed6b796eb.jpg" alt="Foto pasangan pengantin" class="w-full h-full object-cover rounded-lg aspect-[2/3] border-2 border-white/20 hover:border-white/50 transition" onerror="this.onerror=null;this.src='https://placehold.co/400x600/333/FFF?text=Gambar+Gagal+Dimuat';">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="border-t border-gray-400 mb-12"></div>
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
+                <div class="md:w-1/3 flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold tracking-widest">Nikah Yuk!</h3>
+                    <p class="text-xs text-gray-600 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                    <p class="text-xs text-gray-500 mt-auto pt-8">2025 Hak Cipta Terpelihara</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">KANTOR</h4>
+                    <p class="text-sm">Jl. Alam Sutera Raya No. 16A, <br> RT.4/RW.3, Kebon Jeruk, Tebet, <br> South Jakarta City, Jakarta 12830</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">HUBUNGI KAMI</h4>
+                    <p class="text-sm">+62 21 292008889</p>
+                    <p class="text-sm">cs@nikahyuk!.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- KODE JAVASCRIPT ---
+
+        // Mengatur toggle untuk menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mengatur logika untuk musik latar
+        const backgroundMusic = document.getElementById('background-music');
+        const audioControlBtn = document.getElementById('audio-control-btn');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+        
+        // Fungsi untuk memulai musik
+        const startMusic = async () => {
+            try {
+                // Memainkan musik. Browser akan mengizinkan ini karena dipicu oleh klik pengguna.
+                await backgroundMusic.play();
+                // Menampilkan tombol kontrol setelah musik berhasil diputar
+                audioControlBtn.classList.remove('hidden');
+                pauseIcon.classList.remove('hidden'); // Tampilkan ikon jeda
+                playIcon.classList.add('hidden');
+            } catch (err) {
+                console.error("Gagal memutar audio:", err);
+            }
+        };
+
+        // Menambahkan listener yang hanya berjalan sekali saat pengguna mengklik di mana saja
+        // Ini membantu mengatasi kebijakan autoplay browser
+        document.body.addEventListener('click', startMusic, { once: true });
+
+        // Menambahkan listener untuk tombol kontrol musik (play/pause)
+        audioControlBtn.addEventListener('click', (e) => {
+            // Menghentikan event agar tidak memicu listener 'click' di body lagi
+            e.stopPropagation(); 
+            
+            // Memeriksa apakah musik sedang dijeda atau tidak
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                pauseIcon.classList.remove('hidden');
+                playIcon.classList.add('hidden');
+            } else {
+                backgroundMusic.pause();
+                pauseIcon.classList.add('hidden');
+                playIcon.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

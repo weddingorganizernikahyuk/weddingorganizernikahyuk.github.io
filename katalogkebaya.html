@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Nikah Yuk!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tampilan.css">
+</head>
+<body>
+
+    <!-- Header dan Navigasi (Sama dengan halaman beranda) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Navigasi Desktop Kiri -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="beranda.html" class="hover:text-gray-300 transition-colors duration-300">BERANDA</a>
+                    <a href="tentangkami.html" class="hover:text-gray-300 transition-colors duration-300">TENTANG KAMI</a>
+                    <div class="relative group">
+                        <a href="Untitled-4.html" class="hover:text-gray-300 transition-colors duration-300">LAYANAN</a>
+                        <div class="dropdown-content absolute left-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg py-1 hidden group-hover:block">
+                            <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                            <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                            <a href="untitled-4.html#fotografi" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Pusat -->
+                <div class="text-center text-white">
+                    <a href="beranda.html" class="text-2xl lg:text-3xl font-bold tracking-widest">Nikah Yuk!</a>
+                    <p class="text-xs text-gray-400 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                </div>
+                <!-- Navigasi Desktop Kanan -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+                    <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+                    <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="beranda.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">BERANDA</a>
+            <a href="tentangkami.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">TENTANG KAMI</a>
+            <div class="relative w-full">
+                <a href="Untitled-4.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">LAYANAN</a>
+                <div class="space-y-1 text-sm">
+                    <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                    <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                    <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+            <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+            <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+        </div>
+    </header>
+    <!-- Bagian Galeri Kebaya -->
+    <section class="gallery-section-detail">
+        <h2>Galeri Kebaya</h2>
+        <p>Jelajahi koleksi kebaya kami yang indah, dirancang untuk berbagai acara mulai dari pernikahan, wisuda, hingga acara formal lainnya. Setiap kebaya dibuat dengan detail dan sentuhan tradisional modern.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item-detail">
+                <img src="https://i.pinimg.com/1200x/76/fc/6f/76fc6f2670104d95f04b63d61363b6dc.jpg" alt="Kebaya Modern Brokat">
+                <div class="caption">
+                    <h3>Kebaya Brokat Modern</h3>
+                    <p>Perpaduan brokat mewah dengan desain kontemporer yang elegan.</p>
+                </div>
+            </div>
+            <div class="gallery-item-detail">
+                <img src="https://i.pinimg.com/1200x/de/4e/df/de4edf4f793ea2aa21317af746358160.jpg" alt="Kebaya Pengantin Putih">
+                <div class="caption">
+                    <h3>Kebaya Pengantin Putih</h3>
+                    <p>Kebaya putih bersih dengan payet berkilau, sempurna untuk hari bahagia.</p>
+                </div>
+            </div>
+            <div class="gallery-item-detail">
+                <img src="https://i.pinimg.com/1200x/5b/79/b4/5b79b43b4a07b030cb4300c22e6d4d1e.jpg" alt="Kebaya Wisuda Pastel">
+                <div class="caption">
+                    <h3>Kebaya Wisuda Pastel</h3>
+                    <p>Desain ringan dengan warna pastel yang lembut, cocok untuk momen kelulusan.</p>
+                </div>
+            </div>
+            <div class="gallery-item-detail">
+                <img src="https://i.pinimg.com/736x/b7/1b/76/b71b7661e0cc3f7ae998edbe2b35728e.jpg" alt="Kebaya Kartini">
+                <div class="caption">
+                    <h3>Kebaya Kartini Klasik</h3>
+                    <p>Inspirasi dari kebaya tradisional Kartini dengan sentuhan modern.</p>
+                </div>
+            </div>
+            <div class="gallery-item-detail">
+                <img src="https://i.pinimg.com/736x/24/20/97/242097db7249b56c12dd9ecd55670cdf.jpg" alt="Kebaya dengan Batik">
+                <div class="caption">
+                    <h3>Kebaya Kombinasi Batik</h3>
+                    <p>Harmoni antara kebaya dan motif batik tradisional yang indah.</p>
+                </div>
+            </div>
+            <div class="gallery-item-detail">
+                <img src="https://i.pinimg.com/1200x/3f/ae/9a/3fae9a10d9a9b0ea1dd92d79ad3ac12a.jpg" alt="Kebaya Encim">
+                <div class="caption">
+                    <h3>Kebaya Encim Berwarna</h3>
+                    <p>Kebaya Encim dengan bordir cerah yang khas dan menawan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Sama dengan halaman beranda) -->
+    <footer class="bg-gray-200 text-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="border-t border-gray-400 mb-12"></div>
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
+                <div class="md:w-1/3 flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold tracking-widest">Nikah Yuk!</h3>
+                    <p class="text-xs text-gray-600 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                    <p class="text-xs text-gray-500 mt-auto pt-8">2025 Hak Cipta Terpelihara</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">KANTOR</h4>
+                    <p class="text-sm">Jl. Alam Sutera Raya No. 16A, <br> RT.4/RW.3, Kebon Jeruk, Tebet, <br> South Jakarta City, Jakarta 12830</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">HUBUNGI KAMI</h4>
+                    <p class="text-sm">+62 21 292008889</p>
+                    <p class="text-sm">cs@nikahyuk!.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript untuk menu mobile (jika diperlukan)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

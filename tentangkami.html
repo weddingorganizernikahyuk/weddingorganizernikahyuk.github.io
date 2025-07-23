@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Nikah Yuk!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tampilan.css">
+</head>
+<body>
+
+    <!-- Header dan Navigasi (Sama dengan halaman beranda) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Navigasi Desktop Kiri -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="beranda.html" class="hover:text-gray-300 transition-colors duration-300">BERANDA</a>
+                    <a href="tentangkami.html" class="hover:text-gray-300 transition-colors duration-300">TENTANG KAMI</a>
+                    <div class="relative group">
+                        <a href="Untitled-4.html" class="hover:text-gray-300 transition-colors duration-300">LAYANAN</a>
+                        <div class="dropdown-content absolute left-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg py-1 hidden group-hover:block">
+                            <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                            <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                            <a href="untitled-4.html#fotografi" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Pusat -->
+                <div class="text-center text-white">
+                    <a href="beranda.html" class="text-2xl lg:text-3xl font-bold tracking-widest">Nikah Yuk!</a>
+                    <p class="text-xs text-gray-400 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                </div>
+                <!-- Navigasi Desktop Kanan -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+                    <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+                    <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="beranda.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">BERANDA</a>
+            <a href="tentangkami.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">TENTANG KAMI</a>
+            <div class="relative w-full">
+                <a href="Untitled-4.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">LAYANAN</a>
+                <div class="space-y-1 text-sm">
+                    <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                    <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                    <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+            <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+            <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian Profil -->
+        <section class="py-20 sm:py-28 bg-black text-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="font-elegant text-5xl md:text-6xl mb-6">Profil</h1>
+                        <p class="text-gray-300 text-lg mb-4">
+                        Nikah Yuk! didirikan pada tahun 2025 oleh tiga wanita visioner: Ayu, Herlinda, dan Zulfika. Mereka memulai bisnis ini setelah mengamati kerumitan perencanaan pernikahan, menyadari kebutuhan akan solusi yang modern dan efisien. Dengan semangat inovasi, Nikah Yuk! terus berkembang sebagai penyedia layanan pernikahan terintegrasi.
+                        Kini, Nikah Yuk! menawarkan layanan lengkap seperti Sanggar Tata Rias, Sanggar Tata Busana, Photography, dan Upacara Adat, menjadikannya "One Stop Wedding Service". Inovasi, kreativitas, dan profesionalisme adalah kekuatan utama kami dalam melayani pelanggan.
+                        Kami memahami pentingnya momen pernikahan. Di era digital, kami melihat kebutuhan akan layanan berkualitas tinggi yang juga mudah diakses dan informatif secara daring. Oleh karena itu, kami mengembangkan platform web ini.
+                        </p>
+                        <p class="text-gray-300 text-lg">
+                            Kini, Nikah Yuk telah berkembang menjadi Sanggar Tata Rias, Sanggar Tata Busana, Photography, Upacara Adat dan lain-lain, sesuai visi kami menjadi perusahaan One Stop Wedding Service. Inovasi, Kreativitas, serta Profesionalisme merupakan salah satu kiat kami dalam menarik pelanggan.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="https://i.pinimg.com/736x/af/b6/c2/afb6c27e16711a4249fae40e67c1a003.jpg" alt="Ibu Liza" class="w-full max-w-md h-auto object-cover rounded-lg shadow-lg border-2 border-white/20" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/FFF?text=Gambar+Profil';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Vision & Mission -->
+        <section class="py-20 sm:py-28 bg-gray-900 text-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-stretch gap-12">
+                    <div class="md:w-1/2 flex items-center justify-center bg-gray-950 p-6 rounded-lg shadow-xl">
+                        <img src="https://cdn1-production-images-kly.akamaized.net/pzYo9eyaH2qMm90eTBAa8sElJjc=/500x667/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2994178/original/080872600_1576132984-36085245_466130553799510_7508230830641119232_n.jpg" alt="Vision & Mission" class="max-w-full max-h-[70vh] object-cover rounded-lg border-2 border-white/20" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/FFF?text=Gambar+Visi+Misi';">
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center p-6">
+                        <h2 class="font-elegant text-5xl md:text-6xl leading-tight mb-8">VISION<br>& MISSION</h2>
+
+                        <h3 class="font-bold text-2xl md:text-3xl mb-4 text-gray-200">OUR VISION</h3>
+                        <p class="text-gray-300 text-lg mb-8">
+                        Menjadi penyedia layanan pernikahan terkemuka di Indonesia yang mengintegrasikan tradisi dengan inovasi digital, memastikan setiap pasangan dapat merayakan cinta mereka tanpa drama dan dengan penuh kebahagiaan.
+                        </p>
+
+                        <h3 class="font-bold text-2xl md:text-3xl mb-4 text-gray-200">OUR MISSION</h3>
+                        <p class="text-gray-300 text-lg">
+                        Menghadirkan solusi pernikahan 'One Stop Wedding Service' yang inovatif, berkualitas tinggi, dan mudah diakses secara digital, dengan mengutamakan kepercayaan klien dan menciptakan pengalaman tanpa drama menuju hari bahagia mereka.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Sama dengan halaman beranda) -->
+    <footer class="bg-gray-200 text-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="border-t border-gray-400 mb-12"></div>
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
+                <div class="md:w-1/3 flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold tracking-widest">Nikah Yuk!</h3>
+                    <p class="text-xs text-gray-600 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                    <p class="text-xs text-gray-500 mt-auto pt-8">2025 Hak Cipta Terpelihara</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">KANTOR</h4>
+                    <p class="text-sm">Jl. Alam Sutera Raya No. 16A, <br> RT.4/RW.3, Kebon Jeruk, Tebet, <br> South Jakarta City, Jakarta 12830</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">HUBUNGI KAMI</h4>
+                    <p class="text-sm">+62 21 292008889</p>
+                    <p class="text-sm">cs@nikahyuk!.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- KODE JAVASCRIPT ---
+
+        // Mengatur toggle untuk menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Tidak ada logika musik di halaman ini
+    </script>
+
+</body>
+</html>

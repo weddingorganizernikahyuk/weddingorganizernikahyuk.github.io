@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Nikah Yuk!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tampilan.css">
+    <!-- Font Awesome untuk ikon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-black text-white font-inter">
+    <!-- Header dan Navigasi (Konsisten dengan halaman lain) -->
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Navigasi Desktop Kiri -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="beranda.html" class="hover:text-gray-300 transition-colors duration-300">BERANDA</a>
+                    <a href="tentangkami.html" class="hover:text-gray-300 transition-colors duration-300">TENTANG KAMI</a>
+                    <div class="relative group">
+                        <a href="Untitled-4.html" class="hover:text-gray-300 transition-colors duration-300">LAYANAN</a>
+                        <div class="dropdown-content absolute left-0 mt-2 w-48 bg-black/90 rounded-md shadow-lg py-1 hidden group-hover:block">
+                            <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                            <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                            <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-sm text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Pusat -->
+                <div class="text-center text-white">
+                    <a href="beranda.html" class="text-2xl lg:text-3xl font-bold tracking-widest font-elegant">Nikah Yuk!</a>
+                    <p class="text-xs text-gray-400 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                </div>
+                <!-- Navigasi Desktop Kanan -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-medium tracking-wider">
+                    <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+                    <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+                    <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+                </div>
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Menu Mobile (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 text-center">
+            <a href="beranda.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">BERANDA</a>
+            <a href="tentangkami.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">TENTANG KAMI</a>
+            <div class="relative w-full">
+                <a href="Untitled-4.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">LAYANAN</a>
+                <div class="space-y-1 text-sm">
+                    <a href="untitled-4.html#tata-rias" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Rias</a>
+                    <a href="untitled-4.html#tata-busana" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Tata Busana</a>
+                    <a href="Untitled-4.html#fotografi" class="block px-4 py-2 text-white hover:bg-gray-700 rounded-md">Fotografi</a>
+                </div>
+            </div>
+            <a href="galeri.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">GALERI</a>
+            <a href="pricelist.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">PRICELIST</a>
+            <a href="kontak.html" class="block hover:text-gray-300 transition-colors duration-300 py-2">KONTAK</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Price List -->
+        <section class="relative h-[60vh] min-h-[400px] flex items-center justify-start px-6" id="tata-rias">
+            <img src="https://i.pinimg.com/1200x/bf/b7/6a/bfb76a5cb239b376ba575ae328ca7cfc.jpg" alt="Tata Rias" class="absolute inset-0 w-full h-full object-cover brightness-75" onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/333/FFF?text=Gambar+Tata+Rias';">
+            <h1 class="relative z-10 font-elegant text-6xl md:text-7xl lg:text-8xl text-white uppercase text-shadow-lg">GALERI KAMI</h1>
+        </section>
+
+        <!-- Bagian Galeri Gambar -->
+        <section class="py-16 px-6 bg-gray-900">
+            <div class="container mx-auto">
+                <h2 class="font-elegant text-5xl text-center text-white mb-12">Momen Indah Kami</h2>
+                
+                <!-- Kategori Galeri Gambar -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="gallery-filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300 active-filter" data-filter="all">Semua</button>
+                    <button class="gallery-filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300" data-filter="prewedding">Pre-Wedding</button>
+                    <button class="gallery-filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300" data-filter="weddingday">Hari Pernikahan</button>
+                    <button class="gallery-filter-btn bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300" data-filter="decorations">Dekorasi</button>
+                </div>
+
+                <div id="image-gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Contoh Gambar Galeri -->
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group prewedding">
+                        <img src="https://cdn0-production-images-kly.akamaized.net/iGTtvsozohtO6ijLIny9CF1RlzU=/500x667/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5163417/original/098341700_1742010201-Snapinst.app_484273199_18495913282063856_3068497256165375469_n_1080.jpg" alt="Pre-Wedding 1" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Pre-Wedding Romantis</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group weddingday">
+                        <img src="https://i.pinimg.com/1200x/e2/b7/18/e2b718da9e8f1fd899f635443f0209c5.jpg" alt="Wedding Day 1" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Momen Sakral</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group decorations">
+                        <img src="https://i.pinimg.com/1200x/d8/29/27/d8292732acd9200b8e61d45643fcb857.jpg" alt="Dekorasi 1" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Dekorasi Elegan</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group prewedding">
+                        <img src="https://i.pinimg.com/1200x/bc/fa/0d/bcfa0de21849ac7a36979661334a9a63.jpg" alt="Pre-Wedding 2" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Cinta di Alam Terbuka</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group weddingday">
+                        <img src="https://i.pinimg.com/736x/33/cf/80/33cf8051f92938f465364bce42fb019a.jpg" alt="Wedding Day 2" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Senyum Bahagia</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group decorations">
+                        <img src="https://i.pinimg.com/736x/d0/76/8a/d0768a2be2d01b061663c89561a4e0c0.jpg" alt="Dekorasi 2" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Detail Mewah</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group weddingday">
+                        <img src="https://i.pinimg.com/1200x/2f/fd/01/2ffd01bb26871647e2b0775677bad9b5.jpg" alt="Wedding Day 3" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Janji Suci</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300 group prewedding">
+                        <img src="https://i.pinimg.com/1200x/19/1d/5b/191d5be6d417b138483a39d39fbed908.jpg" alt="Pre-Wedding 3" class="w-full h-64 object-cover">
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white group-hover:text-gray-300">Petualangan Berdua</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Galeri Video dari YouTube -->
+        <section class="py-16 px-6 bg-black">
+            <div class="container mx-auto">
+                <h2 class="font-elegant text-5xl text-center text-white mb-12">Video Kisah Cinta</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Contoh Video YouTube Embed 1 -->
+                    <div class="video-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/SX_KtGM3Oco" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white">Highlight Pernikahan Indah</p>
+                        </div>
+                    </div>
+                    <!-- Contoh Video YouTube Embed 2 -->
+                    <div class="video-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative w-full" style="padding-top: 56.25%;">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/d9n2tYNqARA" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white">Kisah Cinta Abadi</p>
+                        </div>
+                    </div>
+                    <!-- Contoh Video YouTube Embed 3 -->
+                    <div class="video-item rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="relative w-full" style="padding-top: 56.25%;">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full rounded-lg"
+                                src="https://www.youtube.com/embed/ddOccEZ98G8" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-4 bg-gray-800 text-center">
+                            <p class="text-lg font-semibold text-white">Perjalanan Menuju Pernikahan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Sama dengan halaman beranda) -->
+    <footer class="bg-gray-200 text-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="border-t border-gray-400 mb-12"></div>
+            <div class="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
+                <div class="md:w-1/3 flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold tracking-widest">Nikah Yuk!</h3>
+                    <p class="text-xs text-gray-600 tracking-[0.2em]">Merayakan Cinta Tanpa Drama</p>
+                    <p class="text-xs text-gray-500 mt-auto pt-8">2025 Hak Cipta Terpelihara</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">KANTOR</h4>
+                    <p class="text-sm">Jl. Alam Sutera Raya No. 16A, <br> RT.4/RW.3, Kebon Jeruk, Tebet, <br> South Jakarta City, Jakarta 12830</p>
+                </div>
+                <div class="md:w-1/3">
+                    <h4 class="font-bold mb-2">HUBUNGI KAMI</h4>
+                    <p class="text-sm">+62 21 292008889</p>
+                    <p class="text-sm">cs@nikahyuk!.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Confirmation / Messages -->
+    <div id="custom-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl text-center max-w-sm mx-4">
+            <p class="text-gray-800 text-lg mb-6"></p> <!-- Pesan akan dimasukkan di sini oleh JS -->
+            <div class="flex justify-center space-x-4">
+                <button id="modal-confirm-btn" class="bg-gray-700 text-white py-2 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300">Oke</button>
+                <button id="modal-cancel-btn" class="bg-gray-300 text-gray-800 py-2 px-6 rounded-lg hover:bg-gray-400 transition-colors duration-300 hidden">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mengatur toggle untuk menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                if (mobileMenu) mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Mendapatkan elemen modal
+        const customModal = document.getElementById('custom-modal');
+        const modalMessageP = customModal ? customModal.querySelector('p') : null;
+        const modalConfirmBtn = document.getElementById('modal-confirm-btn');
+        const modalCancelBtn = document.getElementById('modal-cancel-btn');
+
+        // Fungsi untuk menampilkan modal dengan pesan dan konfigurasi tombol kustom
+        function showCustomModal(message, isConfirmation = false, confirmText = 'Oke', cancelText = 'Batal', confirmAction = null) {
+            if (!customModal || !modalMessageP || !modalConfirmBtn || !modalCancelBtn) {
+                console.error("Modal elements not found!");
+                return;
+            }
+
+            modalMessageP.textContent = message;
+            modalConfirmBtn.textContent = confirmText;
+
+            // Hapus semua event listener sebelumnya untuk menghindari duplikasi
+            modalConfirmBtn.onclick = null;
+            modalCancelBtn.onclick = null;
+
+            if (isConfirmation) {
+                modalCancelBtn.textContent = cancelText;
+                modalCancelBtn.classList.remove('hidden');
+                
+                modalConfirmBtn.onclick = () => {
+                    if (confirmAction) {
+                        confirmAction();
+                    }
+                    customModal.classList.add('hidden');
+                };
+                modalCancelBtn.onclick = () => {
+                    customModal.classList.add('hidden');
+                };
+            } else { // Pesan sederhana dengan tombol "Oke"
+                modalCancelBtn.classList.add('hidden');
+                modalConfirmBtn.onclick = () => {
+                    customModal.classList.add('hidden');
+                };
+            }
+            customModal.classList.remove('hidden');
+        }
+
+        // Fungsi untuk filtering galeri gambar
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.gallery-filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Hapus kelas 'active-filter' dari semua tombol
+                    filterButtons.forEach(btn => btn.classList.remove('active-filter'));
+                    // Tambahkan kelas 'active-filter' ke tombol yang diklik
+                    button.classList.add('active-filter');
+
+                    const filter = button.dataset.filter;
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.classList.remove('hidden');
+                            item.classList.add('block');
+                        } else {
+                            item.classList.add('hidden');
+                            item.classList.remove('block');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
